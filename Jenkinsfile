@@ -19,6 +19,7 @@ pipeline{
 
 			steps {
 				sh 'sudo usermod -a -G docker jenkins'
+				sh 'grep docker /etc/group'
 			}
 		}
 
