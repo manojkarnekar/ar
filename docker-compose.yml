@@ -2,16 +2,16 @@ version: "2.3"
 
 services:
   # micros docekr image build
-  roscore:
+  talker:
       image: ros:noetic-ros-core-focal
       # build:
       #   context: .
       #   dockerfile: Dockerfile.ros2.micro_ros
       environment:
         - "ROS_DOMAIN_ID=0"
-        - "ROS_IP=192.168.29.3"
-        - "ROS_MASTER_URI=http://192.168.29.3:11311"
-      command: bash -c "roscore"
+        - "ROS_IP=192.168.0.171"
+        - "ROS_MASTER_URI=http://192.168.0.171:11311"
+      command: bash -c "source /opt/ros/noetic/setup.bash && rosrun talker talker"
       # devices:
       #   - /octo
       tty: true
