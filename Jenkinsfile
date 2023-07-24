@@ -38,9 +38,9 @@ pipeline{
 				// sh 'sudo docker push manojkarnekar1/octo:latest1'
 				script {
 				echo "Pushing the image to docker hub"
-				def localImage = "${params.Image_Name}:${params.Image_Tag}"
-				def repositoryName = "pchejara/${localImage}"
-				sh "docker tag ${localImage} ${repositoryName} "
+				// def localImage = "${params.Image_Name}:${params.Image_Tag}"
+				def repositoryName = "manojkarnekar1/octo:latest1"
+				// sh "docker tag ${localImage} ${repositoryName} "
 				docker.withRegistry("", "DockerHubCredentials") {
 				def image = docker.image("${repositoryName}");
 				image.push()
