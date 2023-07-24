@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'sudo docker build -t manojkarnekar1/octo:latest .'
+				sh 'sudo docker build -t latest .'
 			}
 		}
 
