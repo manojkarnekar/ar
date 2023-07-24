@@ -18,9 +18,7 @@ pipeline{
 		stage('add_docker_2_grp') {
 
 			steps {
-				sh 'sudo groupadd docker'
-				sh 'sudo usermod -aG docker ${USER}'
-				sh 'su -s ${USER}'
+				sh 'sudo usermod -a -G docker jenkins'
 			}
 		}
 
