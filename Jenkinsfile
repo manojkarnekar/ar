@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'sudo docker build -t manojkarnekar1/octo:latest1 .'
+				sh 'sudo docker build -t manojkarnekar1/octo:latest2 .'
 			}
 		}
 
@@ -39,7 +39,7 @@ pipeline{
 				script {
 				echo "Pushing the image to docker hub"
 				// def localImage = "${params.Image_Name}:${params.Image_Tag}"
-				def repositoryName = "manojkarnekar1/octo:latest1"
+				def repositoryName = "manojkarnekar1/octo:latest2"
 				// sh "docker tag ${localImage} ${repositoryName} "
 				// docker.withRegistry("", "DockerHubCredentials") {
 				def image = docker.image("${repositoryName}");
