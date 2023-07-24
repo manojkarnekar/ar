@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t manojkarnekar/noetic:latest .'
+				sh 'sudo docker build -t manojkarnekar/noetic:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push manojkarnekar/noetic:latest'
+				sh 'sudo docker push manojkarnekar/noetic:latest'
 			}
 		}
 	}
