@@ -20,7 +20,7 @@ pipeline{
 			steps {
 				sh 'sudo usermod -a -G docker jenkins'
 				sh 'grep docker /etc/group'
-				sh 'chmod 777 /var/run/docker.sock'
+				sh 'sudo chmod 777 /var/run/docker.sock'
 			}
 		}
 
