@@ -34,7 +34,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'sudo docker push manojkarnekar1/octo:latest'
+				sh 'sudo docker push docker.io/manojkarnekar1/octo:latest'
 			}
 		}
 	}
