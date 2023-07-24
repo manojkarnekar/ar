@@ -18,7 +18,9 @@ pipeline{
 		stage('add_docker_2_grp') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				sh 'sudo groupadd docker'
+				sh 'sudo usermod -aG docker ${USER}'
+				sh 'su -s ${USER}'
 			}
 		}
 
