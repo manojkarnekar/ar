@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'sudo docker build -t latest .'
+				sh 'sudo docker build -t manojkarnekar1/octo:latest .'
 			}
 		}
 
@@ -34,7 +34,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'sudo docker push docker.io/manojkarnekar1/octo:latest'
+				sh 'sudo docker push manojkarnekar1/octo:latest'
 			}
 		}
 	}
