@@ -11,7 +11,7 @@ services:
         - "ROS_DOMAIN_ID=0"
         - "ROS_IP=192.168.0.171"
         - "ROS_MASTER_URI=http://192.168.0.171:11311"
-      command: bash -c "source /opt/ros/noetic/setup.bash && rosrun talker talker"
+      command: bash -c "source /catkin_ws/devel/setup.bash && rosrun talker talker"
       # devices:
       #   - /octo
       tty: true
