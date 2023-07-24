@@ -41,10 +41,10 @@ pipeline{
 				// def localImage = "${params.Image_Name}:${params.Image_Tag}"
 				def repositoryName = "manojkarnekar1/octo:latest1"
 				// sh "docker tag ${localImage} ${repositoryName} "
-				docker.withRegistry("", "DockerHubCredentials") {
+				// docker.withRegistry("", "DockerHubCredentials") {
 				def image = docker.image("${repositoryName}");
 				image.push()
-         	}
+         	// }
      		}
 			}
 		}
