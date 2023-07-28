@@ -8,6 +8,13 @@ pipeline{
 
 	stages {
 
+		stage('Build') {
+
+			steps {
+				sh 'sudo docker build -t manojkarnekar1/octo:latest1 .'
+			}
+		}
+
 		stage('add_docker_2_grp') {
 
 			steps {
@@ -16,16 +23,6 @@ pipeline{
 				sh 'sudo chmod 777 /var/run/docker.sock'
 			}
 		}
-
-
-		stage('Build') {
-
-			steps {
-				sh 'sudo docker build -t manojkarnekar1/octo:latest1 .'
-			}
-		}
-
-
 
 		stage('Login') {
 
