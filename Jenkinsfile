@@ -15,14 +15,14 @@ pipeline{
 			}
 		}
 
-		stage('add_docker_2_grp') {
+		// stage('add_docker_2_grp') {
 
-			steps {
-				sh 'sudo usermod -a -G docker jenkins'
-				sh 'grep docker /etc/group'
-				sh 'sudo chmod 777 /var/run/docker.sock'
-			}
-		}
+		// 	steps {
+		// 		sh 'sudo usermod -a -G docker jenkins'
+		// 		sh 'grep docker /etc/group'
+		// 		sh 'sudo chmod 777 /var/run/docker.sock'
+		// 	}
+		// }
 
 		stage('Login') {
 
