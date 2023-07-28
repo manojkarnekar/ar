@@ -10,7 +10,9 @@ RUN mkdir -p ${ROS_WS}/src
 COPY /catkin_ws/src/talker ${ROS_WS}/src/talker
 
 RUN bash -c 'apt-get update \
-&& apt-get install -y --no-install-recommends ros-noetic-catkin python3-catkin-tools \
+&& apt-get install -y --no-install-recommends apt-utils \
+&& apt-get install -y --no-install-recommends ros-noetic-catkin \
+python3-catkin-tools \
 ros-noetic-nav-msgs \
 ros-noetic-sensor-msgs \
 && cd ${ROS_WS} \
