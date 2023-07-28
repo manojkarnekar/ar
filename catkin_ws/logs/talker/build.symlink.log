@@ -1,0 +1,5 @@
+Symlinking /home/octo/ar/catkin_ws/devel/lib/talker/talker
+Symlinking /home/octo/ar/catkin_ws/devel/lib/talker/listener
+Symlinking /home/octo/ar/catkin_ws/devel/lib/pkgconfig/talker.pc
+Symlinking /home/octo/ar/catkin_ws/devel/share/talker/cmake/talkerConfig-version.cmake
+Symlinking /home/octo/ar/catkin_ws/devel/share/talker/cmake/talkerConfig.cmake

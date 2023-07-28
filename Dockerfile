@@ -15,4 +15,4 @@ ros-noetic-nav-msgs \
 ros-noetic-sensor-msgs \
 && cd ${ROS_WS} \
 && source /opt/ros/noetic/setup.bash \
-&& catkin_make'
+&& catkin build'
